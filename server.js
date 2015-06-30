@@ -6,17 +6,19 @@ var mongoose = require('mongoose');        // mongoose for mongodb
 var morgan = require('morgan');             // log requests to the console (express4)
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
-
+// database connection vars
+var db_prod = 'mongodb://mongo:70volkswagen@ds037622.mongolab.com:37622/heroku_v52rd94l';
+var db_dev = 'mongodb://localhost:27017/Task_app';
 
 // configuration =================
 // if (NODE_ENV === "production") {
   // Use -- PRODUCTION - HEROKU connection to mongodb with mongoose using mongolab plugin for heroku
-  // mongoose.connect('mongodb://node:nodeuser@localhost:27017/');
+
 // } else if (NODE_ENV === "") {
 
 // } {
   // Use -- DEV - LOCAL connection to mongodb with mongoose
-  mongoose.connect('mongodb://localhost:27017/Task_app');
+  mongoose.connect(db_dev);
 // }
 
 
