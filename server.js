@@ -9,10 +9,16 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 
 
 // configuration =================
-// -- DEV - LOCAL connection to mongodb with mongoose
-mongoose.connect('mongodb://localhost:27017/Task_app');
-// -- DEPLOY - HEROKU connection to mongodb with mongoose using mongolab plugin for heroku
-// mongoose.connect('mongodb://node:nodeuser@localhost:27017/');
+// if (NODE_ENV === "production") {
+  // Use -- PRODUCTION - HEROKU connection to mongodb with mongoose using mongolab plugin for heroku
+  // mongoose.connect('mongodb://node:nodeuser@localhost:27017/');
+// } else if (NODE_ENV === "") {
+  
+// } {
+  // Use -- DEV - LOCAL connection to mongodb with mongoose
+  mongoose.connect('mongodb://localhost:27017/Task_app');
+// }
+
 
 // var db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));

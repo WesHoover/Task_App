@@ -4,7 +4,11 @@
   "description": "a super-simple task list",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "~0.12.2"
   },
   "repository": {
     "type": "git",

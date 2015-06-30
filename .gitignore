@@ -2,10 +2,6 @@
 #######################
 mockups/
 
-
-
-
-
 # OCTOCAT's  recommendations #
 # Compiled source #
 ###################
@@ -44,3 +40,9 @@ mockups/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Heroku deployment #
+#####################
+node_modules
+npm-debug.log
+/*.env
