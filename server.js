@@ -1,16 +1,15 @@
-// set up ========================
 require('underscore');
-var express  = require('express');
-var app      = express();
-var mongoose = require('mongoose');        // mongoose for mongodb
-var morgan = require('morgan');             // log requests to the console (express4)
-var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
+var express = require('express');
+var app = express();
+var mongoose = require('mongoose'); // mongoose for mongodb
+var morgan = require('morgan'); // log requests to the console (express4)
+var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 // database connection vars
-var db_prod = 'mongodb://mongo:70volkswagen@ds037622.mongolab.com:37622/heroku_v52rd94l';
+var db_prod = 'mongodb://mongo:mongodb1@ds037622.mongolab.com:37622/heroku_v52rd94l';
 var db_dev = 'mongodb://localhost:27017/Task_app';
 
-// configuration =================
+// db connection
 // if (NODE_ENV === "production") {
   // Use -- PRODUCTION - HEROKU connection to mongodb with mongoose using mongolab plugin for heroku
 
@@ -18,7 +17,7 @@ var db_dev = 'mongodb://localhost:27017/Task_app';
 
 // } {
   // Use -- DEV - LOCAL connection to mongodb with mongoose
-mongoose.connect('mongodb://mongo:70volkswagen@ds037622.mongolab.com:37622/heroku_v52rd94l');
+mongoose.connect('mongodb://mongo:mongodb1@ds037622.mongolab.com:37622/heroku_v52rd94l');
 // }
 
 
@@ -29,10 +28,10 @@ mongoose.connect('mongodb://mongo:70volkswagen@ds037622.mongolab.com:37622/herok
 // });
 
 
-app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
-app.use(morgan('dev'));                                         // log every request to the console
-app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
-app.use(bodyParser.json());                                     // parse application/json
+app.use(express.static(__dirname + '/public'));  // set the static files location /public/img will be /img for users
+app.use(morgan('dev'));  // log every request to the console
+app.use(bodyParser.urlencoded({'extended':'true'})); // parse application/x-www-form-urlencoded
+app.use(bodyParser.json());  // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
