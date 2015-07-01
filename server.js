@@ -18,7 +18,7 @@ var db_dev = 'mongodb://localhost:27017/Task_app';
 
 // } {
   // Use -- DEV - LOCAL connection to mongodb with mongoose
-  mongoose.connect(db_dev);
+  mongoose.connect(prod);
 // }
 
 
