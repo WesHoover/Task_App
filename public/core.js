@@ -1,6 +1,4 @@
-
-
-  var taskApp = angular.module('taskApp', []);
+var taskApp = angular.module('taskApp', []);
 
   function mainController($scope, $http) {
       $scope.formData = {};
@@ -40,4 +38,4 @@
               });
       };
 
-  }
+}
