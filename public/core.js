@@ -1,4 +1,4 @@
-(function(){
+
 
   var taskApp = angular.module('taskApp', []);
 
@@ -41,4 +41,3 @@
       };
 
   }
-})();
