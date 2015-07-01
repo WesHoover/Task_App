@@ -1,4 +1,4 @@
-var taskApp = angular.module('taskApp', []);
+var todoApp = angular.module('todoApp', []);
 
   function mainController($scope, $http) {
       $scope.formData = {};
@@ -30,6 +30,18 @@ var taskApp = angular.module('taskApp', []);
       $scope.deleteTodo = function(id) {
           $http.delete('/api/todos/' + id)
               .success(function(data) {
+                  $scope.todos = data;
+                  console.log(data);
+              })
+              .error(function(data) {
+                  console.log('Error: ' + data);
+              });
+      };
+
+      $scope.updateTodo = function() {
+          $http.post('/api/todos', $scope.formData)
+              .success(function(data) {
+                  $scope.formData = {}; // clear the form so our user is ready to enter another
                   $scope.todos = data;
                   console.log(data);
               })

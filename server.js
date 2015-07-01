@@ -7,7 +7,7 @@ var bodyParser = require('body-parser'); // pull information from HTML POST (exp
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 // database connection vars
 // var db_prod = 'mongodb://mongo:mongodb1@ds037622.mongolab.com:37622/heroku_v52rd94l';
-// var db_dev = 'mongodb://localhost:27017/Task_app';
+var db_dev = 'mongodb://localhost:27017/Task_app';
 
 // db connection
 // if (NODE_ENV === "production") {
@@ -95,9 +95,27 @@ app.delete('/api/todos/:todo_id', function(req, res) {
     });
 });
 
+// app.update('/api/todos/:todo_id', function(req, res) {
+//     Todo.update({
+//         _id : req.params.todo_id
+//     }, function(err, todo) {
+//         if (err)
+//             res.send(err);
+//
+//         // get and return all the todos after you create another
+//         Todo.find(function(err, todos) {
+//             if (err)
+//                 res.send(err);
+//
+//             res.json(todos);
+//         });
+//     });
+// });
+
+
 // application -------------------------------------------------------------
 app.get('*', function(req, res) {
-   res.sendfile('./public/index.html'); // load the single view file 
+   res.sendfile('./public/index.html'); // load the single view file
 });
 
 // listen (start app with node server.js)
