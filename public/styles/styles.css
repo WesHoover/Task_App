@@ -10,3 +10,11 @@ body {
 #todo-list {
   margin-bottom:30px;
 }
+
+
+#main-form {
+  position: absolute;
+}
+.hidden {
+  ;
+}
