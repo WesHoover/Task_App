@@ -22,6 +22,21 @@
     #main-form {
       width: 75%;
     }
+    ::-webkit-input-placeholder {
+    color: rgb(51, 51, 51);
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: rgb(51, 51, 51);
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: rgb(51, 51, 51);
+    }
+
+    :-ms-input-placeholder {
+       color: rgb(51, 51, 51);
+    }
 
   </style>
 
@@ -60,8 +75,17 @@
                 <!-- LOOP OVER THE TODOS IN $scope.todos -->
                 <div class="checkbox" ng-repeat="todo in todos">
                     <label>
-                        <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+                        <input type="checkbox" ng-click="deleteTodo(todo._id)">
                     </label>
+                    <input type="text" name="" id="" placeholder="{{ todo.text }}">
+                    <!--Creating an editable list element
+                          use todo.text for form overlay
+                          when todo.text is clicked, hide it reveal(or swap in) form
+                          for should have the text from the list element filled in and already selected
+                            -->
+
+
+
                 </div>
 
             </div>
