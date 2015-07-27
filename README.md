@@ -1,4 +1,5 @@
-# A super simple Todo App called doot  
+# A super simple Todo App called doot  -CURRENTLY DATABASE IS INACTIVE, will not save tasks.
+Used this to learn about the MEAN stack, especially Angular.
 
 ## Type in a task and it'll display in a list.  
 
@@ -19,3 +20,5 @@ https://trello.com/b/nM4yYYCy/task-app
 
 ### App on Heroku:  
 https://secret-spire-7481.herokuapp.com/
+
+Thanks to scotch.io for the great tutorial.
