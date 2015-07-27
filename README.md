@@ -19,3 +19,5 @@ https://trello.com/b/nM4yYYCy/task-app
 
 ### App on Heroku:  
 https://secret-spire-7481.herokuapp.com/
+
+Thanks to scotch.io for the great tutorial.
