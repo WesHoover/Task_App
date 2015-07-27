@@ -1,4 +1,4 @@
-# A super simple Todo App called doot  
+# A super simple Todo App called doot  -CURRENTLY DATABASE IS INACTIVE, will not save tasks.
 Used this to learn about the MEAN stack, especially Angular.
 
 ## Type in a task and it'll display in a list.  
