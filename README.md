@@ -1,4 +1,5 @@
 # A super simple Todo App called doot  
+Used this to learn about the MEAN stack, especially Angular.
 
 ## Type in a task and it'll display in a list.  
 
